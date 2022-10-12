@@ -1,15 +1,30 @@
 import React, { useState, useRef } from 'react';
-
+import useFetch from '../hooks/useFetch'
 
 function CommandUnit() {
     const readOnly = useRef();
     const [input, setInput] = useState('');
     const [output, setOutput] = useState('');
-
+    const { data, loading, error } = useFetch(
+        process.env.REACT_APP_COMMANDS_LIST
+      );
+    
+    // if (loading) return <p> LOADING...</p>;
+    if (error) console.log(error);
+    var commandsList = [];
     const handleKeyDown = (event) => {
         if (event.key === 'Enter') {
-            console.log(event.target.value)
-            setOutput(event.target.value)
+            if (data[event.target.value]){
+                setOutput(data[event.target.value])
+            }else{
+                for (const x in data) {
+                    commandsList.push(x)
+                }
+
+                const op = `List of available commands: \n` + commandsList.join('\t')
+                setOutput(op)
+            }
+            
             readOnly.current.readOnly = true;
         }
       }
@@ -24,8 +39,7 @@ function CommandUnit() {
                 onKeyDown={handleKeyDown}
                 className='terminal-input'
             />
-            <br/>
-            <span>{output}</span>
+            <pre className='terminal-output'>{output}</pre>
         </div>
     )
 }
