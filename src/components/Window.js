@@ -7,7 +7,7 @@ function Window() {
     <div className='window'>       
         <div className='container'>
             <div className='row d-flex justify-content-center'>
-                <div className='col-md-8 py-5'>
+                <div className='col-md-8'>
                     <Draggable>
                         <div><Terminal/></div>
                     </Draggable>
