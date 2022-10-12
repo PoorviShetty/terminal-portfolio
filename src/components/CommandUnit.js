@@ -5,7 +5,7 @@ function CommandUnit() {
     const readOnly = useRef();
     const [input, setInput] = useState('');
     const [output, setOutput] = useState('');
-    const { data, loading, error } = useFetch(
+    const { data, error } = useFetch(
         process.env.REACT_APP_COMMANDS_LIST
       );
     
@@ -31,7 +31,7 @@ function CommandUnit() {
 
     return (
         <div className='command-unit'>
-            &gt; 
+            <span className='purple'>root@PS:</span>~$&nbsp;
             <input 
                 value={input} 
                 ref={readOnly}

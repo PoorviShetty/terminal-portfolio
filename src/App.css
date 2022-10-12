@@ -1,24 +1,37 @@
+.App{
+  background-image: url("./images/bg.jpg");
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  height: 100vh;
+  overflow-y: auto;
+}
+
 .terminal{
-    background-color: black;
-    background-image: radial-gradient(
-        rgba(0, 36, 83, 0.673), black 120%
-      );
+    background-color: #2e2157;
     color:white;
     font: 1rem Inconsolata, monospace;
-    text-shadow: 0 0 5px #C8C8C8;
-    height: 95.5vh;
-    padding: 1rem;
+    min-height: 60vh;
 }
 
 .terminal-input{
   background-color: transparent;
   color:white;
   font: 1rem Inconsolata, monospace;
-  text-shadow: 0 0 5px #C8C8C8;
   outline: none;
   border-color: transparent;
 }
 
-.terminal-output{
-  margin:0;
+.top-bar{
+  background-color: #b322963f;
+  height:2rem;
+  padding: 0.25rem 1rem 0 1rem;
+}
+
+.terminal-content{
+  padding: 1rem;
+}
+
+.purple{
+  color: #b32296;
 }

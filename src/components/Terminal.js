@@ -13,7 +13,12 @@ function Terminal() {
       }
     return (
         <div className='terminal' onKeyDown={handleKeyDown}>
-           {unit.map((i) => i)}
+            <div className='top-bar'>
+                <p className='float-end d-block'>–&#09;✖</p>
+            </div>
+            <div className='terminal-content'>
+                {unit.map((i) => i)}
+            </div>
         </div>
     )
 }
