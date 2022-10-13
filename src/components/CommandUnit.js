@@ -47,6 +47,7 @@ function CommandUnit() {
         <div className='command-unit'>
             <span className='purple'>root@PS:</span>~$&nbsp;
             <input 
+                autoFocus
                 value={input} 
                 ref={readOnly}
                 onInput={e => setInput(e.target.value)}

@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import CommandUnit from './CommandUnit';
 
 function Terminal() {
-    const [unit, setUnit] = useState([<CommandUnit key = {Math.random()} autoFocus />]);
+    const [unit, setUnit] = useState([<CommandUnit key = {Math.random()} />]);
 
     const handleKeyDown = (event) => {
         if (event.key === 'Enter') {
             setUnit(
-                [...unit, <CommandUnit key = {Math.random()} autoFocus />]
+                [...unit, <CommandUnit key = {Math.random()} />]
               )
         }
       }

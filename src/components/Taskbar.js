@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import Help from '../images/help.png'
 import Modal from 'react-bootstrap/Modal';
-import useFetch from '../hooks/useFetch';
 
 function Taskbar() {
     const [show, setShow] = useState(false);
