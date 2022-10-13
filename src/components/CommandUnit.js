@@ -14,15 +14,29 @@ function CommandUnit() {
     var commandsList = [];
     const handleKeyDown = (event) => {
         if (event.key === 'Enter') {
-            if (data[event.target.value]){
-                setOutput(data[event.target.value])
+            let command = event.target.value.split(" ")[0]
+            let help = false
+            if (event.target.value.split(" ").length > 1){
+                help = true;
+            }
+            if (data[command]){
+                if (!help){
+                    setOutput(data[command][0]["output"])
+                }else{
+                    setOutput(data[command][1]["help"])
+                }
             }else{
                 for (const x in data) {
                     commandsList.push(x)
                 }
-
-                const op = `Command not found!\n\nList of available commands: \n` + commandsList.join('\t')
-                setOutput(op)
+                
+                if (event.target.value === 'help'){
+                    const op = `List of available commands: \n` + commandsList.join('\t')
+                    setOutput(op)
+                }else{
+                    const op = `Command not found!\n\nList of available commands: \n` + commandsList.join('\t')
+                    setOutput(op)
+                }
             }
             
             readOnly.current.readOnly = true;

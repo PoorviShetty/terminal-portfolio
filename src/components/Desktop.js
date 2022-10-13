@@ -6,7 +6,7 @@ import LinkedIn from '../images/linkedin.png'
 
 function Desktop() {
   return (
-    <div className='desktop px-2'>
+    <div className='desktop px-2 pb-5'>
         <Draggable>
             <div className='icon-div mt-2'>
                 <a href={process.env.REACT_APP_GITHUB} target="_blank" rel="noreferrer">

@@ -17,6 +17,11 @@ function Terminal() {
                 <p className='float-end d-block'>–&#09;✖</p>
             </div>
             <div className='terminal-content'>
+                <p>
+                    Welcome! <br/><br/>
+                    Type <span className = 'purple'>help</span> to get the list of commands! <br/>
+                    Type <span className = 'purple'>command_name --help</span> to know what a command does.
+                </p>
                 {unit.map((i) => i)}
             </div>
         </div>
