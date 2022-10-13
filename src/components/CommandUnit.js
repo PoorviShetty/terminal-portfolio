@@ -21,7 +21,7 @@ function CommandUnit() {
                     commandsList.push(x)
                 }
 
-                const op = `List of available commands: \n` + commandsList.join('\t')
+                const op = `Command not found!\n\nList of available commands: \n` + commandsList.join('\t')
                 setOutput(op)
             }
             

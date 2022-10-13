@@ -1,10 +1,17 @@
-.App{
+.desktop{
   background-image: url("./images/bg.jpg");
   background-position: center; 
   background-repeat: no-repeat; 
   background-size: cover; 
-  height: 100vh;
+  height: 93vh;
   overflow-y: auto;
+}
+
+.taskbar{
+  height:7vh;
+  background-color: #0d0221;
+  color: white;
+  font-size: 0.75rem;
 }
 
 .terminal{
@@ -42,5 +49,19 @@
 
 }
 .icon{
-  height:3rem;
+  height:2.75rem;
+  cursor: pointer;
+}
+
+/* Modal Customisation */
+.modal-content{
+  border-radius: 0 !important;
+  background-color: #540d6e !important;
+  color: white !important;
+  font-size: 1rem !important;
+}
+
+.modal-header{
+  background-color: #2e2157 !important;
+  border-bottom: 0 !important;
 }
