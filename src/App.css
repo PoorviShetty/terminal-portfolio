@@ -12,6 +12,7 @@
   background-color: #0d0221;
   color: white;
   font-size: 0.75rem;
+  font-family: 'Ubuntu' !important;
 }
 
 .terminal{
@@ -59,9 +60,11 @@
   background-color: #540d6e !important;
   color: white !important;
   font-size: 1rem !important;
+  font-family: 'Ubuntu' !important;
 }
 
 .modal-header{
   background-color: #2e2157 !important;
   border-bottom: 0 !important;
+  border-radius: 0 !important;
 }

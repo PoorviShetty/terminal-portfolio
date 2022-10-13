@@ -47,8 +47,8 @@ function Taskbar() {
                     <Modal.Title>Need Help?</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <p>Feel free to click on the icons or play around with the terminal!</p>
-                    <p>Only a few custom commands work for the terminal, beware!</p>
+                    <p>Feel free to click on the icons or play around with the terminal!<br/>
+                        Only a few custom commands work for the terminal, beware!</p>
                 </Modal.Body>
             </Modal>
         </>
